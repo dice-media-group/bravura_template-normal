@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="en" class="scroll-smooth antialiased selection:bg-primary-500 selection:text-primary-50" data-theme="base" data-graytheme="grayNormal" data-mode="light">
 <head>
-  <title>Bravura template normal</title>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-
-  <%= stylesheet_link_tag    "bravura_template/normal/application", media: "all" %>
+  <%= render 'layouts/bravura_template/normal/head' %>
 </head>
-<body>
-
-<%= yield %>
-
+<body class="overflow-x-hidden bg-white font-sans text-secondary-900 antialiased">
+  <section class="flex min-h-screen flex-col justify-between">
+    <%= render 'layouts/bravura_template/normal/header' %>
+    <main class="main-wrapper flex-1">
+      <%= yield %>
+    </main>
+    <%= render 'layouts/bravura_template/normal/footer' %>
+  </section>
+  <%= render 'layouts/bravura_template/normal/scripts' %>
 </body>
 </html>

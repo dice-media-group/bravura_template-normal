@@ -1,0 +1,23 @@
+<div class="categories-sidebar lg:sticky lg:col-span-3 lg:top-28">
+  <p class="hidden text-xs font-bold uppercase tracking-widest text-secondary-500 lg:block">Tags</p>
+  <form method="get" action="/?page=1">
+    <input type="hidden" name="page" value="1">
+    <nav class="max-h-[50vh] overflow-y-auto mt-5 space-y-1 hidden lg:block" aria-label="Sidebar">
+      <%= render 'posts/sidebar_navigation' %>
+    </nav>
+  </form>
+  <details class="menu-details lg:hidden">
+    <summary class="flex w-full cursor-pointer items-center justify-between text-base font-semibold text-secondary-900 -m-2 rounded-lg p-2 hover:bg-secondary-100 hover:text-secondary-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-900">
+      <span class="sr-only">Open tag filters</span>View Tags
+      <%= render 'posts/sidebar_toggle_icons' %>
+    </summary>
+    <div>
+      <form method="get" action="/?page=1">
+        <input type="hidden" name="page" value="1">
+        <nav class="max-h-[50vh] overflow-y-auto mt-5 space-y-1" aria-label="Sidebar">
+          <%= render 'posts/sidebar_navigation' %>
+        </nav>
+      </form>
+    </div>
+  </details>
+</div>

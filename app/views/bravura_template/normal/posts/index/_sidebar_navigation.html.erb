@@ -1,0 +1,8 @@
+<% @tags.each do |tag| %>
+  <button type="submit" name="tag" value="<%= tag.slug %>" class="group flex w-full items-center text-sm font-medium rounded-lg px-3 py-2 text-secondary-500 hover:bg-secondary-100 hover:text-secondary-900">
+    <span class="truncate"><%= tag.name %></span>
+    <% if tag.post_count > 0 %>
+      <span class="inline-block bg-white text-xs ml-auto rounded-full py-0.5 px-3"><%= tag.post_count %></span>
+    <% end %>
+  </button>
+<% end %>
