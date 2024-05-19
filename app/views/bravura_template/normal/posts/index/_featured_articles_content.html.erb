@@ -1,0 +1,38 @@
+<div class="normal-main-featured-article group relative">
+  <a class="article-cover aspect-w-16 aspect-h-8 block overflow-hidden bg-secondary-200 rounded-lg" href="<%= featured_article.url %>">
+    <span class="sr-only"><%= featured_article.title %></span>
+    <img alt="<%= featured_article.title %>" src="<%= featured_article.cover_image %>" class="h-full w-full object-cover transition-all duration-100 group-hover:opacity-75">
+  </a>
+  <div class="mt-6">
+    <div class="flex flex-wrap items-center space-x-2">
+      <div class="article-author flex items-center">
+        <div class="flex-shrink-0">
+          <a href="<%= featured_article.author.url %>">
+            <span class="sr-only"><%= featured_article.author.name %></span>
+            <img alt="<%= featured_article.author.name %>" src="<%= featured_article.author.avatar %>" class="h-5 w-5 mr-2 rounded-full">
+          </a>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-secondary-900">
+            <a href="<%= featured_article.author.url %>"><%= featured_article.author.name %></a>
+          </p>
+        </div>
+      </div>
+      <p class="article-publish-date-separator text-sm font-medium text-secondary-500">/</p>
+      <p class="article-publish-date text-sm font-medium text-secondary-500">
+        <time datetime="<%= featured_article.publish_date %>"><%= featured_article.formatted_publish_date %></time>
+      </p>
+    </div>
+    <a class="block mt-4" href="<%= featured_article.url %>">
+      <h3 class="article-title text-xl font-bold tracking-tight text-secondary-900"><%= featured_article.title %></h3>
+      <p class="article-excerpt text-base font-medium text-secondary-500 line-clamp-2 mt-3"><%= featured_article.excerpt %></p>
+    </a>
+    <div class="article-tags-list flex flex-wrap mt-5">
+      <% featured_article.tags.each do |tag| %>
+        <a class="article-tag inline-flex items-center bg-secondary-100 text-xs font-bold text-secondary-600 transition-all duration-200 mr-2 mb-2 rounded-full px-2.5 py-0.5 hover:bg-secondary-200 hover:text-secondary-900" href="<%= tag.url %>">
+          <%= tag.name %>
+        </a>
+      <% end %>
+    </div>
+  </div>
+</div>

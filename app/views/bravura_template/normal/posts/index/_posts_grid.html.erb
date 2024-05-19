@@ -1,0 +1,24 @@
+<div class="articles-grid grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-y-12 xl:grid-cols-3">
+  <% @posts.each do |post| %>
+    <div class="normal-article group relative">
+      <a class="article-cover aspect-w-16 aspect-h-8 block overflow-hidden bg-secondary-200 rounded-lg" href="<%= post.url %>">
+        <span class="sr-only"><%= post.title %></span>
+        <img alt="<%= post.title %>" src="<%= post.cover_image %>" class="h-full w-full object-cover transition-all duration-100 group-hover:opacity-75">
+      </a>
+      <div class="mt-6">
+        <!-- Add post metadata -->
+      </div>
+      <a class="block mt-4" href="<%= post.url %>">
+        <h3 class="article-title text-xl font-bold tracking-tight text-secondary-900"><%= post.title %></h3>
+        <p class="article-excerpt text-base font-medium text-secondary-500 line-clamp-3 mt-3"><%= post.excerpt %></p>
+      </a>
+      <div class="article-tags-list flex flex-wrap mt-5">
+        <% post.tags.each do |tag| %>
+          <a class="article-tag inline-flex items-center bg-secondary-100 text-xs font-bold text-secondary-600 transition-all duration-200 mr-2 mb-2 rounded-full px-2.5 py-0.5 hover:bg-secondary-200 hover:text-secondary-900" href="<%= tag.url %>">
+            <%= tag.name %>
+          </a>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -2,9 +2,11 @@
 ActiveSupport.on_load(:action_controller_base) do
   before_action do
     BlogTemplates.register_template(
-      name: 'normal',
+      name: 'Normal',
       gem: 'bravura_template-normal',
-      description: 'A normal template'
+      description: 'A normal template',
+      thumbnail: "bravura_template/normal/thumbnail.webp",
+      preview_link: "https://normal.feather.blog/"
     )
   end
 end
