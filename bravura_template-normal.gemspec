@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version     = BravuraTemplate::Normal::VERSION
   spec.authors     = ["captproton"]
   spec.email       = ["carl@wdwhub.net"]
-  spec.homepage    = "TODO"
+  spec.homepage    = "https://github.com/dice-media-group/bravura_template-normal"
   spec.summary     = "TODO: Summary of BravuraTemplate::Normal."
   spec.description = "TODO: Description of BravuraTemplate::Normal."
   spec.license     = "MIT"
