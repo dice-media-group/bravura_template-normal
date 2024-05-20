@@ -11,4 +11,4 @@ Rails.application.config.assets.version = "1.0"
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 # config/initializers/assets.rb
-Rails.application.config.assets.precompile += %w( bravura_template/normal/thumbnail.webp )
+Rails.application.config.assets.precompile += %w[bravura_template/normal/thumbnail.webp]

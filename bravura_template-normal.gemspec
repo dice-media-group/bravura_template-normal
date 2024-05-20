@@ -1,6 +1,7 @@
 require_relative "lib/bravura_template/normal/version"
 
 Gem::Specification.new do |spec|
+  # rubocop:disable Layout/ExtraSpacing
   spec.name        = "bravura_template-normal"
   spec.version     = BravuraTemplate::Normal::VERSION
   spec.authors     = ["captproton"]
@@ -9,6 +10,7 @@ Gem::Specification.new do |spec|
   spec.summary     = "TODO: Summary of BravuraTemplate::Normal."
   spec.description = "TODO: Description of BravuraTemplate::Normal."
   spec.license     = "MIT"
+  # rubocop:enable Layout/ExtraSpacing
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
   # to allow pushing to a single host or delete this section to allow pushing to any host.
